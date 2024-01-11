@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
+    <title>Homepage</title>
+
+    <!-- bootstrap-css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <!-- custom-css -->
+
+
+    <!-- box-icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      html{
+        scroll-behavior: smooth;
+      }
+      .custom-header {
+        background-color: rgb(4, 87, 177);
+      }
+
+
+.navbar{
+  background-color: #a4c2c8;
+}
+
+.book-now {
+  border-radius: 10px;
+  width: 85px;
+  /* padding: 0 5px; */
+}
+      /* }
+      .try {
+        border: 1px solid red;
+      }
+      .try-2{
+        border: 1px solid rgb(12, 8, 225);
+      }
+      .try-3{
+        border: 2px solid tomato;
+      }
+ */
+
+      
+      .gallery-item ,.gallery-item-2{
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .overlay-content{
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0;
+          transition: 2s ease-in-out;
+          cursor: pointer;
+        }
+
+        .content{
+          position: absolute;
+          top: 33%;
+          /* left: 50%; */
+          color: white;
+          background: #000;
+          text-align: center;
+        }
+
+        .gallery-item:hover .overlay-content{
+          opacity: 0.5;
+          width: 100%;
+        
+        }
+        .gallery-item-2:hover .overlay-content{
+          opacity: 0.8;
+          width: 100%;
+        
+        }
+
+        .gallery-item img{
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+         
+            background: #14e128;
+            border-radius: 3px;
+        }
+        .gallery-item-2 img{
+            height: 122.5px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 3px;
+           
+        }
+
+        .gallery-item img:hover, .gallery-item-2 img:hover{
+            transition: 2s;
+            transform: scale(1.1);
+        }
+        .para{
+          text-align: justify;
+        }
+
+        .recent-blogs{
+          position: relative;
+        }
+
+       
+        
+        .recent-blogs::after{
+          content: '';
+          position: absolute;
+          height: 3px;
+          left: 0px;
+          bottom:-10px ;
+          width:44%;
+          color: #000;
+          background-color:rgb(12, 131, 206);
+          
+        }
+
+        .circle{
+          position: absolute;
+          height: 20px;
+          width: 20px;
+          background-color: rgb(18, 162, 195);
+          border-radius: 50%;
+          /* top:0px; */
+          right: 250px;
+          z-index: 1;
+          /* bottom: 2px; */
+          /* float: right;
+          right: 2px;
+          top: 2px; */
+        }
+
+        .recent-blogs-cards{
+          height: 180px;
+          width: 100%;
+          margin-bottom: 5px;
+        }
+        .recent-blogs  {
+          overflow: hidden;
+
+        }
+        .recent-blogs-cards img{
+          height: 150px;
+          width: 150px;
+        }
+        .recent-blogs-cards img:hover{
+          transition: 1s ease;
+          transform: scale(1.1);
+        }
+
+        @media  screen and (min-wid:360px) {
+          .recent-blogs-cards img{
+              height: 90px;
+              width: 100%; 
+              background: #000;
+          }
+          
+          
+        }
+        
+
+        /* comments */
+        .content-item {
+    padding:30px 0;
+	background-color:#FFFFFF;
+}
+
+.content-item.grey {
+	background-color:#F0F0F0;
+	padding:50px 0;
+	height:100%;
+}
+
+.content-item h2 {
+	font-weight:700;
+	font-size:35px;
+	line-height:45px;
+	text-transform:uppercase;
+	margin:20px 0;
+}
+
+.content-item h3 {
+	font-weight:400;
+	font-size:20px;
+	color:#555555;
+	margin:10px 0 15px;
+	padding:0;
+}
+
+.content-headline {
+	height:1px;
+	text-align:center;
+	margin:20px 0 70px;
+}
+
+.content-headline h2 {
+	background-color:#FFFFFF;
+	display:inline-block;
+	margin:-20px auto 0;
+	padding:0 20px;
+}
+
+.grey .content-headline h2 {
+	background-color:#F0F0F0;
+}
+
+.content-headline h3 {
+	font-size:14px;
+	color:#AAAAAA;
+	display:block;
+}
+
+
+#comments {
+    box-shadow: 0 -1px 6px 1px rgba(0,0,0,0.1);
+	background-color:#FFFFFF;
+}
+
+#comments form {
+	margin-bottom:30px;
+}
+
+#comments .btn {
+	margin-top:7px;
+}
+
+#comments form fieldset {
+	clear:both;
+}
+
+#comments form textarea {
+	height:100px;
+}
+
+#comments .media {
+	border-top:1px dashed #DDDDDD;
+	padding:20px 0;
+	margin:0;
+}
+
+#comments .media > .pull-left {
+    margin-right:20px;
+}
+
+#comments .media img {
+	max-width:100px;
+}
+
+#comments .media h4 {
+	margin:0 0 10px;
+}
+
+#comments .media h4 span {
+	font-size:14px;
+	float:right;
+	color:#999999;
+}
+
+#comments .media p {
+	margin-bottom:15px;
+	text-align:justify;
+}
+
+#comments .media-detail {
+	margin:0;
+}
+
+#comments .media-detail li {
+	color:#AAAAAA;
+	font-size:12px;
+	padding-right: 10px;
+	font-weight:600;
+}
+
+#comments .media-detail a:hover {
+	text-decoration:underline;
+}
+
+#comments .media-detail li:last-child {
+	padding-right:0;
+}
+
+#comments .media-detail li i {
+	color:#666666;
+	font-size:15px;
+	margin-right:10px;
+}
+
+    </style>
+  </head>
+  <body>
+   
+  <div class="container-fluid custom-header d-none d-lg-block">
+    <div class="row d-flex align-items-center">
+      <div class="col-sm-2">
+     
+        <img src="images/Summit.png" alt="" width="100" />
+      
+
+        </div>
+
+      <!-- <div class="col-sm-10 align-content-lg-end "> -->
+      <!-- <div class="row d-flex"> -->
+      <!-- <li class="list-unstyled"><a href="login.html" class="text-white text-decoration-none"><i class='bx bxs-user fs-2 mt-1'></i></a></li> -->
+      <div class="col-sm-2 mb-2">
+        <a href="tel:9741716087" class="text-decoration-none text-white"><i class="bx bxs-phone-call fs-5"> </i><span
+            class="display-none display-md-inline-block">+977 1234567890</span></a>
+      </div>
+
+      <div class="col-sm-3 mb-2">
+        <a href="mailto:suwasghale2281@gmail.com" class="text-decoration-none text-white align-items-center"><i
+            class="bx bxs-envelope fs-5"> </i><span
+            class="display-none display-md-inline-block">himalayantravels2023@gmail.com</span>
+        </a>
+      </div>
+
+
+      <div class=" col-sm-4 mb-2">
+        <form action="" class="inline-form d-flex me-2">
+          <input type="search" name="search" id="search" placeholder="search here" class="form-control" />
+          <button type="button" class="btn btn-primary text-white mx-2">
+            <i class="bx bx-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="col-sm-1">
+        <div class="row d-flex">
+          <div class="col-6">
+            <a href="loginboot.html" class="text-white text-decoration-none"><i class="bx bxs-user-plus fs-4"></i>
+              <!-- <span>Register</span>  -->
+            </a>
+          </div>
+
+          <div class="col-6 ">
+            <a href="#" class="text-white text-decoration-none">
+              <i class="bx bxs-cart-add fs-4">
+                <!-- <span>Cart</span> -->
+              </i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- start of navigation bar-->
+
+  <nav  class="navbar navbar-expand-lg  sticky-top ps-2">
+    
+  
+      <a class="navbar-brand  scroll-icon d-none d-lg-block " href="tourism_project.html">Himalayan Travels</a>
+      <img src="images/himalayan_travels.png" alt="" width="100px" class="d-block d-lg-none">
+    
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse me-5 " id="navbarNavDropdown">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="tourism_project.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false"
+            href="about_company_info.html">About Us
+          </a>
+          <ul class="dropdown-menu dropdown-menu-md-center">
+            <li><a href="about_company_info.html" class="dropdown-item">Company Info</a></li>
+
+            <li><a href="about_our_team.html" class="dropdown-item">Team Members</a></li>
+            <li>
+            <li><a href="payments.html" class="dropdown-item">Payment Methods</a></li>
+            <li><a href="terms.html" class="dropdown-item">Terms and Conditions</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a href="documents.html" class="dropdown-item">Documents<span class="badge bg-primary rounded-pill">New</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Packages </a>
+                </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="filterpackages.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Packages
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="domestic.html">Domestic Packages</a></li>
+            <li><a class="dropdown-item" href="internation.html">International Packages</a></li>
+            <li><a class="dropdown-item" href="filterpackages.html">Most Popular Packages</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Our Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="trekking.html" class="dropdown-item">Trekking and Tour</a></li>
+            <li><a href="flight_book.html" class="dropdown-item">Flight Booking</a></li>
+            <li><a href="hotel_book.html" class="dropdown-item">Hotel Reservation</a></li>
+            <li><a href="filteradventure.html" class="dropdown-item">Adventurous Activities</a></li>
+            <li><a href="vehicle.html" class="dropdown-item">Vehicle Rent</a></li>
+            <li><a href="shop.html" class="dropdown-item">Travel Shop</a></li>
+            <li><a href="currency.html" class="dropdown-item">Currency Exchange</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="offersribbon.html" class="nav-link">Offers</a>
+        </li>
+        <li class="nav-item">
+          <a href="filteradventure.html" class="nav-link">Adventurous Activities</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link">Blog</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a href="#" class="nav-link">Career</a>
+        </li> -->
+
+        <!-- <li class="nav-item">
+                <a href="#"  class="nav-link bg-danger rounded-2 text-white flex-shrink-0 d-inline-block" aria-expanded="false" role="button" >Reserve Now</a>
+                </li> -->
+
+        <li class="nav-item ">
+          <a class="nav-link dropdown-item bg-danger text-white book-now" href="booknow2.html">Book Now
+          </a>
+        </li>  
+
+        
+      </ul>
+      <div class="row d-flex align-items-center d-block d-lg-none ">
+      <div class="col-1 pe-sm-2">
+        <a href="loginboot.html" class="text-white text-decoration-none"><i class="bx bxs-user-plus fs-4"></i>
+          <!-- <span>Register</span>  -->
+        </a>
+      </div>
+      <div class="col-1 pe-sm-2">
+        <a href="#" class="text-white text-decoration-none">
+          <i class="bx bxs-cart-add fs-4">
+            <!-- <span>Cart</span> -->
+          </i>
+        </a>
+      </div>
+      <div class="col-1 pe-sm-2">
+        <a href="mailto:suwasghale2281@gmail.com" class="text-decoration-none text-white align-items-center"><i
+            class="bx bxs-envelope fs-5"> </i>
+            <span
+            class="display-none display-md-inline-block"></span>
+        </a>
+      </div>
+      <div class="col-1 me-sm-2">
+        <a href="tel:9741716087" class="text-decoration-none text-white"><i class="bx bxs-phone-call fs-5"> </i><span
+            class="display-none display-md-inline-block"></span></a>
+      </div>
+      <div class=" col-8 col-sm-7">
+        <form action="" class="inline-form d-flex ">
+          <input type="search" name="search" id="search" placeholder="search here" class="form-control me-2" />
+          <button type="button" class="btn btn-primary text-white ">
+            <i class="bx bx-search"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+ 
+ 
+    </div> <!--navbar-collapse ko closing div-->
+  </div>
+    <!-- </div>  -->
+    <!--container-fluid ko closing div-->
+  </nav>
+  <!-- end of navigation bar -->
+
+   <!-- breadcrumb -->
+  
+   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="ms-sm-5 py-2">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="tourism_project.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Blog-Description</li>
+    </ol>
+  </nav>
+
+  <!-- breadcrumb ends -->
+
+    <!-- blog-description starts -->
+    <div class="container my-2">
+     <div class="row">
+
+          <div class="btn-tags mb-2">
+               <a href="#" role="button" class="btn btn-outline-primary  col-md-2 col-xl-2 me-2 rounded-5 ">adventure</a>
+                <a href="blog.html" role="button" class="btn btn-outline-primary col-md-1 me-2 rounded-5 ">blogs</a>
+              <a href="#" role="button" class="btn btn-outline-primary col-md-1 me-2 rounded-5 ">nepal</a>
+            <a href="#" role="button" class="btn btn-outline-primary col-md-1 me-2 rounded-5">trek</a>
+             <a href="#" role="button" class="btn btn-outline-primary col-md-2 me-2 d-none d-sm-inline-block col-sm-2 mt-1  rounded-5 ">climbing</a>
+           <h2 class="text-start mb-3">Top 10 Adventurous Activites in Nepal</h2>
+        </div>   <!--btn-tags closing div-->
+
+        <!-- left -->
+        <div class="col-md-7 col-lg-8 try pe-md-3 pe-lg-5">
+          <div class="row d-flex justify-content-evenly">
+            <div class="col-md-4 g-1 ">
+              
+              <div class="gallery-item">
+                <img src="images/peak_climb1.jpg" alt="Image 2">
+                <div class="overlay-content">
+                  <div class="content col-12">
+                    <h4 class="fw-bold">Peak Climbing</h4>
+                    <p>Peak Climbing by a strong lady with proper guidance.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 g-1">
+              <div class="gallery-item-2 mb-1">
+                <img src="images/rock_climb1.jpg" alt="Image 3" class="img-fluid">
+                <div class="overlay-content">
+                  <div class="content col-12">
+                    <h4 class="fw-bold">Rock Climbing</h4>
+                    <!-- <p>Peak Climbing by a strong lady with proper guidance.</p> -->
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-item-2">
+                <img src="/images/bungee.jpg" alt="Image 4" class="img-fluid">
+                <div class="overlay-content">
+                  <div class="content col-12">
+                    <h4 class="fw-bold">Bungee Jumping</h4>
+                    <!-- <p>Peak Climbing by a strong lady with proper guidance.</p> -->
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+  
+            <div class="col-md-4 g-1 ">
+              <div class="gallery-item">
+                <img src="images/rafting.jpg" alt="Image 6" class="img-fluid">
+                <div class="overlay-content">
+                  <div class="content col-12">
+                    <h4 class="fw-bold">Rafting</h4>
+                    <!-- <p>Peak Climbing by a strong lady with proper guidance.</p> -->
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        
+
+          <div class="row">
+            <div class="intro">
+              <p class="para my-3">
+                Nepal is globally acknowledged as a center for thrill-seeking sports and lures adventurers from various parts of the globe. The country, situated in the Himalayas, is blessed with a multitude of natural splendors, varied terrains and fast flowing river making it an ideal location for a broad spectrum of adventure sports. <br/> <br/>
+
+                There are many Types of  of adventure  Activities in Nepal, including soft , hard and adrenaline adventures such as mountaineering, trekking to the high altitude base camps, sky diving, paragliding, bungee jumping, rafting etc and various other adventure sports. Being said that Nepal also have a side to the soft adventure seekers such camping, hiking, village tours, cycling, helicopter tours to high altitude base camps, etc. Overall, you can find any  kind of adventure in Nepal from serious hard adventures to soft adventures. <br/> <br/>
+                Here are <strong>10</strong> popular adventure activities you can only do in Nepal, whether they are in the Himalayas, by a lake, or by the hills. <br> <br>
+               <h3 class="difficulty-level text-decoration-underline"> Hard Adventures</h3>
+         
+               <ol class="list-group-numbered ">
+                 <li class="list-group-item">
+                  Mountaineering
+                  <p class="para">Climbing in Nepal due to its major adventure sport of mountaineering. Mount Everest, the highest peak globally, is located in Nepal, and many mountaineers visit Nepal to try their luck in climbing this renowned peak. Apart from Mount Everest, other well-known peaks for mountaineering in Nepal include Kanchenjunga, Lhotse, and Cho Oyu. Climbing these peaks requires a high level of technical knowledge, advanced skills, and significant physical fitness due to the harsh weather conditions and climbing to high altitudes. <br> <br>
+
+                    The best time for mountaineering in Nepal is from late March to early June and from late September to early December. Mount Everest, which stands at 8,848 meters, is the ultimate challenge for mountaineers and is a popular attraction for climbers worldwide. Before attempting to climb Everest, climbers usually undergo weeks of acclimatization to high altitudes and require significant training and experience. The climbing route to Everest’s summit passes through several camps, each at progressively higher altitudes, and the final climb to the summit is a grueling and dangerous ascent.</p>
+
+                 </li>
+                 <li class="list-group-item">Paragliding
+                  <p class="para">
+                    Nepal is a famous destination for adventure enthusiasts who love paragliding. The country has various picturesque locations that provide breathtaking views of the Himalayan mountains and the surrounding areas. The most well-known paragliding spots in Nepal are  Sarangkot, and Bandipur.
+                    <br><br>
+
+                    Pokhara is the most sought-after location for paragliding in Nepal, where many companies provide flights with skilled pilots. The flights start from Sarangkot, a hill station located approximately 10 kilometers away from Pokhara. During the flight, travelers can enjoy the beauty of the Pokhara valley, with the Annapurna and Dhaulagiri mountain ranges in the background. Sarangkot is also a favorite spot for experienced paragliders who enjoy flying solo.
+                  </p>
+                 </li>
+                 <li class="list-group-item">Rafting
+                  <p class="para">
+                    Rafting in Nepal's rivers are classified into different grades based on their difficulty levels, with Grade I being the easiest and Grade V being the most challenging. Some of the most popular spots for rafting in Nepal includes: <br><br>
+
+                  *Trishuli River: The Trishuli River is one of the most popular rafting destinations in Nepal, offering a range of rapids from Grade II to IV. <br><br>
+
+                  *Sun Koshi River: The Sun Koshi River is a longer and more challenging river, offering rapids from Grade III to V. The river flows through some of Nepal’s most remote and scenic landscapes, making it a popular choice for multi-day  rafting trips. <br><br>
+
+                  *Kali Gandaki River: The Kali Gandaki River is one of the most challenging and scenic rivers in Nepal, offering rapids from Grade III to V. The river flows through remote valleys and deep gorges, and provides stunning views of the Annapurna and Dhaulagiri mountain ranges. <br><br>
+                  *Bhote Koshi River: The Bhote Koshi River is a short but intense river that offers rapids ranging from Grade IV to V. The river flows through narrow canyons and steep drops, providing a thrilling rafting experience for experienced rafters. <br> <br>
+
+
+                  </p>
+                 </li>
+                 <li class="list-group-item">Bungee Jumping
+                  <p class="para">
+                    Bungee jumping is a popular activity in Nepal that attracts adventure enthusiasts globally. Kushma and Bhotekoshi are two of the most renowned bungee jumping spots in Nepal.  <br><br>
+
+                    The Kushma bungee jump is situated in the Parbat district, approximately three hours away from Pokhara. The jump takes place from a suspension bridge that stretches over the Kali Gandaki River and has a height of about 228 meters. The jump location provides an astounding view of the Himalayas and the river below.
+                  </p>
+                 </li>
+                 <li class="list-group-item">Trekking
+                  <p class="para">
+                    Trekking in Nepal is the most popular adventurous activities.Some of the most well-known trekking routes in Nepal include the Manaslu Circuit Trek, Langtang Valley Trek, Annapurna Circuit Trek, and the Everest Base Camp Trek. However, trekkers should ensure they are physically fit as trekking in Nepal demands a certain level of fitness.Trekkers also need to obtain permits and hire a guide or porter, as most trekking routes in Nepal are in remote areas with limited infrastructure.
+                  </p>
+                 </li>
+                 <li class="list-group-item">Sky Diving
+                  <p class="para">
+                    Everest Skydiving is the primary location for skydiving in Nepal. It's an exclusive adventure that takes place in the Everest region and is organised by a team of skilled skydivers and adventure experts. The adventure involves a helicopter drop from a height of 12000 feet 15000 feet above sea level. During the skydive, you'll be treated to stunning views of the Himalayan mountains, including Mount Everest, Lhotse, and Makalu.
+                  </p>
+                 </li>
+               </ol>
+               <h3 class="difficulty-level text-decoration-underline"> Soft Adventures</h3>
+         
+               <ol class="list-group-numbered ">
+
+                 <li class="list-group-item">Heli Tours
+                  <p class="para">
+                    During the tour, you will get to enjoy breathtaking views of the mountain ranges and the surrounding landscape from a unique perspective. You will also get to land at some of the highest base camps in the world, where you can explore the area and take in the stunning scenery.
+
+                    One of the most popular high altitude helicopter tours is to the base camp of Mount Everest
+                  </p>
+                 </li>
+                 <li class="list-group-item">Cycling
+                  <p class="para">
+                    Cycling in Nepal can be a thrilling adventure, with a range of routes that cater to different fitness levels and preferences. Here are some of the major cycling routes in Nepal: <br><br>
+
+                  *Kathmandu Valley Circuit: This route takes you through the cultural and historical highlights of the Kathmandu Valley. You can find different kinds of trails and routes totally depending upon your preference and needs. Some of the most preferred trails are Nagarkot trail, Panauti trail, Shivapuri trail, etc.   <br><br>
+
+                  *Pokhara Loop: This route is a scenic ride that takes you through the picturesque landscapes of the Pokhara Valley. You'll ride along the tranquil Phewa Lake, cycle through forests and waterfalls, and witness the stunning views of the Annapurna range. The route is relatively easy, with some hills
+                  </p>
+                 </li>
+                 <li class="list-group-item">Village Tours
+                  <p class="para">
+                    Nepal is renowned for its abundant cultural legacy and the conventional lifestyle of its inhabitants. Cultural village tours in Nepal provides a distinct opportunity to witness the daily routine and traditions of rural communities. A few examples of village tours are <strong> Ghale Gaun, Chitlang, and Ghorepani.</strong> <br><br>
+
+                    
+                  </p>
+                 </li>
+                 <li class="list-group-item">Day Hikes
+                  <p class="para">
+                    Walking on natural trails or paths in outdoor environments, such as forests, parks, and mountains, is known as hiking, which is a popular activity. It is a great way to exercise, unwind and explore nature. Day hikes in Nepal can be done at different levels, ranging from simple walks to more demanding treks that needs high fitness levels. Nepal has several well-known hiking spots, such as <strong>Nagarkot, Shivapuri, and Chandragiri.</strong> 
+                  </p>
+                 </li>
+                
+               </ol>
+
+      </div>
+     </div>
+     <!-- comment box form -->
+     <div class="col-12 try-3">
+                        
+      <form class="row g-3">
+        <fieldset class="fw-bold fs-4">Send us your valuable Comment</fieldset>
+        <hr>
+      <div class="col-md-6  mb-1" >
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="name" placeholder="your name" required>
+         
+        
+        </div>
+      <div class="col-md-6  mb-1">
+          
+        <label for="inputEmail4" class="form-label">Email </label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="youremail@gmail.com" required>
+        
+      </div>
+     
+
+      <div class="col-12">
+          <label for="msgbx" class="form-label">Comment your Response: </label>
+          <textarea name="msgbx" id="msgbx" cols="90" rows="7" style="resize:none; border-radius:2px; max-width: 100%; box-sizing: border-box;" ></textarea>
+      </div>
+
+     
+      <div class="col-12 mb-3">
+        <button type="submit" class="btn btn-primary py-1 px-3 fw-bold rounded-4">Send Message</button>
+      </div>
+     </form>
+      </div>  
+      <!-- end of comment box form -->
+
+      <!-- comments -->
+      <section class="content-item" id="comments">
+        <div class="container">   
+          <div class="row">
+                <div class="col-12">   
+                    <form>
+                    
+                    <h3>4 Comments</h3>
+                    
+                    <!-- COMMENT 1 - START -->
+                    <div class="media">
+                        <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""></a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Shyame Solti</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,.</p>
+                            <ul class="list-unstyled list-inline media-detail pull-left">
+                                <li><i class="fa fa-calendar"></i>27/02/2014</li>
+                                <li><i class="fa fa-thumbs-up"></i>13</li>
+                            </ul>
+                            <ul class="list-unstyled list-inline media-detail pull-right">
+                                <li class=""><a href="">Like</a></li>
+                                <li class=""><a href="">Reply</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- COMMENT 1 - END -->
+                    
+                    <!-- COMMENT 2 - START -->
+                    <div class="media">
+                        <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt=""></a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Guffadi Rame</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit ameipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <ul class="list-unstyled list-inline media-detail pull-left">
+                                <li><i class="fa fa-calendar"></i>27/02/2014</li>
+                                <li><i class="fa fa-thumbs-up"></i>13</li>
+                            </ul>
+                            <ul class="list-unstyled list-inline media-detail pull-right">
+                                <li class=""><a href="">Like</a></li>
+                                <li class=""><a href="">Reply</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- COMMENT 2 - END -->
+                    
+                    <!-- COMMENT 3 - START -->
+                    <div class="media">
+                        <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Alxi Hari</h4>
+                            <p>Lorem ipsum dolorm ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <ul class="list-unstyled list-inline media-detail pull-left">
+                                <li><i class="fa fa-calendar"></i>27/02/2014</li>
+                                <li><i class="fa fa-thumbs-up"></i>13</li>
+                            </ul>
+                            <ul class="list-unstyled list-inline media-detail pull-right">
+                                <li class=""><a href="">Like</a></li>
+                                <li class=""><a href="">Reply</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- COMMENT 3 - END -->
+                    
+                    <!-- COMMENT 4 - START -->
+                    <div class="media">
+                        <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar4.png" alt=""></a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Harke Don</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum  ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <ul class="list-unstyled list-inline media-detail pull-left">
+                                <li><i class="fa fa-calendar"></i>27/02/2014</li>
+                                <li><i class="fa fa-thumbs-up"></i>13</li>
+                            </ul>
+                            <ul class="list-unstyled list-inline media-detail pull-right">
+                                <li class=""><a href="">Like</a></li>
+                                <li class=""><a href="">Reply</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- COMMENT 4 - END -->
+                
+                </div>
+            </div>
+        </div>
+    </section>
+      <!-- comments end -->
+     </div>
+
+
+     <!-- blog-right-side-content starts-->
+     <div class="col-md-5 col-lg-4 ps-md-3 pe-md-0 gx-xl-5 ">
+       <form action="">
+       
+        <input type="search" name="search" id="search" placeholder="search" class="form-control mb-3">
+       </form>
+        <h4 class="fw-bold recent-blogs">Recent Blogs
+          <div class="circle">
+
+          </div>
+        </h4>
+        <!-- recent-blogs-starts -->
+        <div class="blog-sides my-1">
+          <!-- recent-blogs-card-1 -->
+        <div class="card mt-2 mb-md-5 border-0 recent-blogs-cards  col-12"  >
+          <div class="row d-flex align-items-center g-0">
+            <div class="col-lg-4 col-4 ">
+              <a href="">
+              <img src="images/everest.jpg" class="img-fluid rounded-2 blogside-img" alt="..." >
+             
+            </a>
+            </div>
+            <div class="col-lg-8  col-8">
+              <a href="" class="text-decoration-none">
+              <div class="card-body  ">
+                <h5 class="card-title">Everest Trek</h5>
+                <p class="card-text">Everest trek is the most adventurous one in Nepal. <br><span class="text-danger fw-bold"> Read more.....</span></p>
+                <p class="card-text "><small class="text-body-secondary">Posted on 23<sup>th</sup>May, 2023</small></p>
+              </div>
+            </a>
+            </div>
+          </div>
+        </div>
+        
+        
+          <!-- recent-blogs-card-2 -->
+        <div class="card mt-md-5 mb-5 border-0 recent-blogs-cards  col-12"  >
+          <div class="row d-flex align-items-center g-0">
+            <div class="col-md-4 col-4">
+              <a href="">
+              <img src="images/lake-mntn.jpg" class="img-fluid rounded-2 blogside-img" alt="..." >
+             
+            </a>
+            </div>
+            <div class="col-md-8 col-8">
+              <a href="" class="text-decoration-none">
+              <div class="card-body ">
+                <h5 class="card-title">Tilicho Trek</h5>
+                <p class="card-text">Tilicho trek is the most adventurous one in Nepal. <br><span class="text-danger fw-bold"> Read more.....</span></p>
+                <p class="card-text"><small class="text-body-secondary">Posted on 23<sup>th</sup>May, 2023</small></p>
+              </div>
+            </a>
+            </div>
+          </div>
+        </div>
+        
+        
+          <!-- recent-blogs-card-3 -->
+        <div class="card mt-2 mb-5 border-0 recent-blogs-cards  col-12"  >
+          <div class="row d-flex align-items-center g-0">
+            <div class="col-md-4 col-4">
+              <a href="">
+              <img src="images/lake.jpg" class="img-fluid rounded-2 blogside-img" alt="..." >
+             
+            </a>
+            </div>
+            <div class="col-md-8 col-8">
+              <a href="" class="text-decoration-none">
+              <div class="card-body ">
+                <h5 class="card-title">Gosainkunda Trek</h5>
+                <p class="card-text">Everest trek is the most adventurous one in Nepal. <br><span class="text-danger fw-bold"> Read more.....</span></p>
+                <p class="card-text"><small class="text-body-secondary">Posted on 23<sup>th</sup>May, 2023</small></p>
+              </div>
+            </a>
+            </div>
+          </div>
+        </div>
+        
+        
+          <!-- recent-blogs-card-1 -->
+        <div class="card mt-2 mb-5 border-0 recent-blogs-cards  col-12"  >
+          <div class="row d-flex align-items-center g-0">
+            <div class="col-md-4 col-4">
+              <a href="">
+              <img src="images/everest.jpg" class="img-fluid rounded-2 blogside-img" alt="..." >
+             
+            </a>
+            </div>
+            <div class="col-md-8 col-8">
+              <a href="" class="text-decoration-none">
+              <div class="card-body ">
+                <h5 class="card-title">Everest Trek</h5>
+                <p class="card-text">Everest trek is the most adventurous one in Nepal. <br><span class="text-danger fw-bold"> Read more.....</span></p>
+                <p class="card-text"><small class="text-body-secondary">Posted on 23<sup>th</sup>May, 2023</small></p>
+              </div>
+            </a>
+            </div>
+          </div>
+        </div>
+        
+        
+          <!-- recent-blogs-card-1 -->
+        <div class="card mt-2 mb-5 border-0 recent-blogs-cards  col-12"  >
+          <div class="row d-flex align-items-center g-0">
+            <div class="col-md-4 col-4">
+              <a href="">
+              <img src="images/everest.jpg" class="img-fluid rounded-2 blogside-img" alt="..." >
+             
+            </a>
+            </div>
+            <div class="col-md-8 col-8">
+              <a href="" class="text-decoration-none">
+              <div class="card-body ">
+                <h5 class="card-title">Everest Trek</h5>
+                <p class="card-text">Everest trek is the most adventurous one in Nepal. <br><span class="text-danger fw-bold"> Read more.....</span></p>
+                <p class="card-text"><small class="text-body-secondary">Posted on 23<sup>th</sup>May, 2023</small></p>
+              </div>
+            </a>
+            </div>
+          </div>
+        </div>
+        
+        
+          <!-- recent-blogs-card-1 -->
+        <div class="card mt-2 mb-5 border-0 recent-blogs-cards  col-12"  >
+          <div class="row d-flex align-items-center g-0">
+            <div class="col-md-4 col-4">
+              <a href="">
+              <img src="images/everest.jpg" class="img-fluid rounded-2 blogside-img" alt="..." >
+             
+            </a>
+            </div>
+            <div class="col-md-8 col-8">
+              <a href="" class="text-decoration-none">
+              <div class="card-body ">
+                <h5 class="card-title">Everest Trek</h5>
+                <p class="card-text">Everest trek is the most adventurous one in Nepal. <br><span class="text-danger fw-bold"> Read more.....</span></p>
+                <p class="card-text"><small class="text-body-secondary">Posted on 23<sup>th</sup>May, 2023</small></p>
+              </div>
+            </a>
+            </div>
+          </div>
+        </div>
+        
+        
+        <!-- recent-blogs-card-ends -->
+       
+      </div>
+    
+      
+    
+   </div>   <!-- recent-blogs-section-ends -->
+   </div>
+   </div>
+   <!-- blog-right-side-content-ends -->
+    <!-- blog-description ends -->
+
+
+    
+  <!-- start of faq section -->
+
+      <div class="container">
+        <h3 class="text-center align-content-around">FAQs</h3>
+
+        <div class="accordion" id="accordionExample">
+                <!-- accordion-1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+               Which are the most visited place in Nepal?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Kathmandu and Pokhara.</strong> Some of the most visited places of Nepal include Kathmandu, Bhaktapur, Lalitpur( city of Temple), Pokhara(City of the lake), Lukla (gateway to the mountain range), Manang(ancient forbidden kingdom), and Mustang(Cold Desert of Nepal).
+              </div>
+            </div>
+          </div>
+                <!-- accordion-2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                What are the best things to do in Nepal?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Many More....</strong> 
+                As a tourist, you can visit the amazing valleys and admire the stunning scenes they offer, experience the rich culture and history by visiting the old and ancient monuments, try various mouthwatering dishes of Nepal and go for a trek in the stunning peaks and mountains.
+              </div>
+            </div>
+          </div>
+                <!-- accordion-3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Where are can I find my itinerary once my trip is booked?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>You can find your Itinerary on our official website www.gurutravelsltd.com. We will send a copy of the itinerary to your mail id upon request.</p>
+              </div>
+            </div>
+          </div>
+        
+                <!-- accordion-4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              What do we need to travel in Nepal as Foreigner?  </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>You have to bring your Passport and Visa papers along with Covit-test Negative documents in order to travel/visit in Nepal.</strong> 
+              </div>
+            </div>
+          </div>
+         
+                <!-- accordion-5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Where are You Located?
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>We are Located at Thamel in Kathmandu.</strong> 
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <h3>Still Got Questions?</h3>
+          <p>If you cannot find answer to your questions in our FAQ, you can always <a href="contact.html" class="text-decoration-none text-primary">contact us</a>. We will answer to you shortly!</p>
+        </div>
+      </div>
+
+  <!-- end of faq section -->
+      
+
+    <!-- start of footer -->
+    <div class="container">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-lg-2  col-sm-6 mb-3">
+            <h5>Company</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blog</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              
+            </ul>
+          </div>
+    
+          <div class="col-lg-3 col-sm-6 mb-3 ">
+            <h5>Contact Us</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kathmandu, Nepal</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">+977 1234567890</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">suwasg2357@gmail.com</a></li>
+              <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li> -->
+            </ul>
+          </div>
+    
+          <div class="col-lg-2 col-sm-6 mb-3   ">
+            <h5>Quick Links</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Style-Guide</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Careers</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Help-Text</a></li>
+              <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li> -->
+            </ul>
+          </div>
+    
+          <div class="col-lg-5  col-sm-6  mb-3  ">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    
+        <div class="d-flex flex-column flex-sm-row justify-content-center py-4 my-4 border-top">
+          <p>&copy; 2023 | SuwasGhale, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex mx-5">
+            <li class="twitter-icon">  
+              <a href="https://www.twitter.com"><i class='bx bxl-twitter px-1'></i></a> 
+          </li>
+          <li class="fb-icon"> 
+              <a href="https://www.facebook.com"><i class='bx bxl-facebook-circle px-1'></i></a>
+          </li>
+
+          <li class="insta-icon">   
+          <a href="https://www.instagram.com"><i class='bx bxl-instagram-alt px-1'></i></a>
+          </li>
+          
+          <li class="linkedin-icon">
+              <a href="https://www.linkedin.com"><i class='bx bxl-linkedin-square px-1'></i></a>
+          </li>
+            <!-- <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+
+            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+
+            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li> -->
+
+          </ul>
+        </div>
+      </footer>
+      <!-- end of footer -->
+    <!-- bootstrap-js -->
+    <script src="assets/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

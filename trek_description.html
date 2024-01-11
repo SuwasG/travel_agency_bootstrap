@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
+  <title>Homepage</title>
+
+  <!-- bootstrap-css -->
+  <link rel="stylesheet" href="assets/css/bootstrap.css" />
+
+  <!-- bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- custom-css -->
+
+
+  <!-- box-icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    .try {
+      border: 1px solid red;
+    }
+
+    .try-2 {
+      border: 1px solid rgb(12, 8, 225);
+    }
+
+    .try-3 {
+      border: 2px solid tomato;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .custom-header {
+      background-color: rgb(4, 87, 177);
+    }
+
+
+    .navbar {
+      background-color: #a4c2c8;
+    }
+
+    .book-now {
+      border-radius: 10px;
+      width: 85px;
+      /* padding: 0 5px; */
+    }
+
+    .gallery-item,
+    .gallery-item-2 {
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .overlay-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: 2s ease-in-out;
+      cursor: pointer;
+    }
+
+    .content {
+      position: absolute;
+      top: 33%;
+      /* left: 50%; */
+      color: white;
+      background: #000;
+      text-align: center;
+    }
+
+    .gallery-item:hover .overlay-content {
+      opacity: 0.5;
+      width: 100%;
+
+    }
+
+    .gallery-item-2:hover .overlay-content {
+      opacity: 0.8;
+      width: 100%;
+
+    }
+
+    .gallery-item img {
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+
+      background: #14e128;
+      border-radius: 3px;
+    }
+
+    .gallery-item-2 img {
+      height: 122.5px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 3px;
+
+    }
+
+    .gallery-item img:hover,
+    .gallery-item-2 img:hover {
+      transition: 2s;
+      transform: scale(1.1);
+    }
+
+    .para {
+      text-align: justify;
+    }
+
+    .recent-blogs {
+      position: relative;
+    }
+
+
+
+    .recent-blogs::after {
+      content: '';
+      position: absolute;
+      height: 3px;
+      left: 0px;
+      bottom: -10px;
+      width: 44%;
+      color: #000;
+      background-color: rgb(12, 131, 206);
+
+    }
+
+    .circle {
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      background-color: rgb(18, 162, 195);
+      border-radius: 50%;
+      /* top:0px; */
+      right: 250px;
+      z-index: 1;
+
+    }
+
+    .recent-blogs-cards {
+      height: 180px;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+    .recent-blogs {
+      overflow: hidden;
+
+    }
+
+    .recent-blogs-cards img {
+      height: 150px;
+      width: 150px;
+    }
+
+    .recent-blogs-cards img:hover {
+      transition: 1s ease;
+      transform: scale(1.1);
+    }
+
+    @media screen and (min-wid:360px) {
+      .recent-blogs-cards img {
+        height: 90px;
+        width: 100%;
+        background: #000;
+      }
+
+
+    }
+
+
+    .bi {
+      font-size: 3em;
+    }
+
+    @media screen and (max-width:420) and (min-width:350px) {
+      .bi {
+        font-size: 2em;
+      }
+    }
+
+
+
+
+
+        /* comments */
+        .content-item {
+    padding:30px 0;
+	background-color:#FFFFFF;
+}
+
+.content-item.grey {
+	background-color:#F0F0F0;
+	padding:50px 0;
+	height:100%;
+}
+
+.content-item h2 {
+	font-weight:700;
+	font-size:35px;
+	line-height:45px;
+	text-transform:uppercase;
+	margin:20px 0;
+}
+
+.content-item h3 {
+	font-weight:400;
+	font-size:20px;
+	color:#555555;
+	margin:10px 0 15px;
+	padding:0;
+}
+
+.content-headline {
+	height:1px;
+	text-align:center;
+	margin:20px 0 70px;
+}
+
+.content-headline h2 {
+	background-color:#FFFFFF;
+	display:inline-block;
+	margin:-20px auto 0;
+	padding:0 20px;
+}
+
+.grey .content-headline h2 {
+	background-color:#F0F0F0;
+}
+
+.content-headline h3 {
+	font-size:14px;
+	color:#AAAAAA;
+	display:block;
+}
+
+
+#comments {
+    box-shadow: 0 -1px 6px 1px rgba(0,0,0,0.1);
+	background-color:#FFFFFF;
+}
+
+#comments form {
+	margin-bottom:30px;
+}
+
+#comments .btn {
+	margin-top:7px;
+}
+
+#comments form fieldset {
+	clear:both;
+}
+
+#comments form textarea {
+	height:100px;
+}
+
+#comments .media {
+	border-top:1px dashed #DDDDDD;
+	padding:20px 0;
+	margin:0;
+}
+
+#comments .media > .pull-left {
+    margin-right:20px;
+}
+
+#comments .media img {
+	max-width:100px;
+}
+
+#comments .media h4 {
+	margin:0 0 10px;
+}
+
+#comments .media h4 span {
+	font-size:14px;
+	float:right;
+	color:#999999;
+}
+
+#comments .media p {
+	margin-bottom:15px;
+	text-align:justify;
+}
+
+#comments .media-detail {
+	margin:0;
+}
+
+#comments .media-detail li {
+	color:#AAAAAA;
+	font-size:12px;
+	padding-right: 10px;
+	font-weight:600;
+}
+
+#comments .media-detail a:hover {
+	text-decoration:underline;
+}
+
+#comments .media-detail li:last-child {
+	padding-right:0;
+}
+
+#comments .media-detail li i {
+	color:#666666;
+	font-size:15px;
+	margin-right:10px;
+}
+
+
+    /* tabs */
+  </style>
+</head>
+
+<body>
+
+  <div class="container-fluid custom-header d-none d-lg-block">
+    <div class="row d-flex align-items-center">
+      <div class="col-sm-2">
+
+        <img src="images/Summit.png" alt="" width="100" />
+
+
+      </div>
+
+      <!-- <div class="col-sm-10 align-content-lg-end "> -->
+      <!-- <div class="row d-flex"> -->
+      <!-- <li class="list-unstyled"><a href="login.html" class="text-white text-decoration-none"><i class='bx bxs-user fs-2 mt-1'></i></a></li> -->
+      <div class="col-sm-2 mb-2">
+        <a href="tel:9741716087" class="text-decoration-none text-white"><i class="bx bxs-phone-call fs-5"> </i><span
+            class="display-none display-md-inline-block">+977 1234567890</span></a>
+      </div>
+
+      <div class="col-sm-3 mb-2">
+        <a href="mailto:suwasghale2281@gmail.com" class="text-decoration-none text-white align-items-center"><i
+            class="bx bxs-envelope fs-5"> </i><span
+            class="display-none display-md-inline-block">himalayantravels2023@gmail.com</span>
+        </a>
+      </div>
+
+
+      <div class=" col-sm-4 mb-2">
+        <form action="" class="inline-form d-flex me-2">
+          <input type="search" name="search" id="search" placeholder="search here" class="form-control" />
+          <button type="button" class="btn btn-primary text-white mx-2">
+            <i class="bx bx-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="col-sm-1">
+        <div class="row d-flex">
+          <div class="col-6">
+            <a href="loginboot.html" class="text-white text-decoration-none"><i class="bx bxs-user-plus fs-4"></i>
+              <!-- <span>Register</span>  -->
+            </a>
+          </div>
+
+          <div class="col-6 ">
+            <a href="#" class="text-white text-decoration-none">
+              <i class="bx bxs-cart-add fs-4">
+                <!-- <span>Cart</span> -->
+              </i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- start of navigation bar-->
+
+  <nav class="navbar navbar-expand-lg  sticky-top ps-2">
+
+
+    <a class="navbar-brand  scroll-icon d-none d-lg-block " href="tourism_project.html">Himalayan Travels</a>
+    <img src="images/himalayan_travels.png" alt="" width="100px" class="d-block d-lg-none">
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse me-5 " id="navbarNavDropdown">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="tourism_project.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false"
+            href="about_company_info.html">About Us
+          </a>
+          <ul class="dropdown-menu dropdown-menu-md-center">
+            <li><a href="about_company_info.html" class="dropdown-item">Company Info</a></li>
+
+            <li><a href="about_our_team.html" class="dropdown-item">Team Members</a></li>
+            <li>
+            <li><a href="payments.html" class="dropdown-item">Payment Methods</a></li>
+            <li><a href="terms.html" class="dropdown-item">Terms and Conditions</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a href="documents.html" class="dropdown-item">Documents<span
+                  class="badge bg-primary rounded-pill">New</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- <li class="nav-item">
+                      <a class="nav-link" href="#">Packages </a>
+                  </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="filterpackages.html" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Packages
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="domestic.html">Domestic Packages</a></li>
+            <li><a class="dropdown-item" href="internation.html">International Packages</a></li>
+            <li><a class="dropdown-item" href="filterpackages.html">Most Popular Packages</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Our Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="trekking.html" class="dropdown-item">Trekking and Tour</a></li>
+            <li><a href="flight_book.html" class="dropdown-item">Flight Booking</a></li>
+            <li><a href="hotel_book.html" class="dropdown-item">Hotel Reservation</a></li>
+            <li><a href="filteradventure.html" class="dropdown-item">Adventurous Activities</a></li>
+            <li><a href="vehicle.html" class="dropdown-item">Vehicle Rent</a></li>
+            <li><a href="currency.html" class="dropdown-item">Currency Exchange</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="offersribbon.html" class="nav-link">Offers</a>
+        </li>
+        <li class="nav-item">
+          <a href="filteradventure.html" class="nav-link">Adventurous Activities</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link">Blog</a>
+        </li>
+        <!-- <li class="nav-item">
+            <a href="#" class="nav-link">Career</a>
+          </li> -->
+
+        <!-- <li class="nav-item">
+                  <a href="#"  class="nav-link bg-danger rounded-2 text-white flex-shrink-0 d-inline-block" aria-expanded="false" role="button" >Reserve Now</a>
+                  </li> -->
+
+        <li class="nav-item ">
+          <a class="nav-link dropdown-item bg-danger text-white book-now" href="booknow2.html">Book Now
+          </a>
+        </li>
+
+
+      </ul>
+      <div class="row d-flex align-items-center d-block d-lg-none ">
+        <div class="col-1 pe-sm-2">
+          <a href="loginboot.html" class="text-white text-decoration-none"><i class="bx bxs-user-plus fs-4"></i>
+            <!-- <span>Register</span>  -->
+          </a>
+        </div>
+        <div class="col-1 pe-sm-2">
+          <a href="#" class="text-white text-decoration-none">
+            <i class="bx bxs-cart-add fs-4">
+              <!-- <span>Cart</span> -->
+            </i>
+          </a>
+        </div>
+        <div class="col-1 pe-sm-2">
+          <a href="mailto:suwasghale2281@gmail.com" class="text-decoration-none text-white align-items-center"><i
+              class="bx bxs-envelope fs-5"> </i>
+            <span class="display-none display-md-inline-block"></span>
+          </a>
+        </div>
+        <div class="col-1 me-sm-2">
+          <a href="tel:9741716087" class="text-decoration-none text-white"><i class="bx bxs-phone-call fs-5"> </i><span
+              class="display-none display-md-inline-block"></span></a>
+        </div>
+        <div class=" col-8 col-sm-7">
+          <form action="" class="inline-form d-flex ">
+            <input type="search" name="search" id="search" placeholder="search here" class="form-control me-2" />
+            <button type="button" class="btn btn-primary text-white ">
+              <i class="bx bx-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+
+    </div> <!--navbar-collapse ko closing div-->
+    </div>
+    <!-- </div>  -->
+    <!--container-fluid ko closing div-->
+  </nav>
+  <!-- end of navigation bar -->
+
+
+    
+    <!-- breadcrumb -->
+    
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="ms-sm-5 py-2">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="tourism_project.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="trekking.html">Tour and Trekkings</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Trek-Description</li>
+        <!-- <li class="breadcrumb-item active" aria-current="page">Hotel Reservation</li> -->
+      </ol>
+    </nav>
+  
+    <!-- breadcrumb ends -->
+
+  <!-- trek-description starts -->
+  <div class="container my-2 position-relative">
+    <div class="row">
+      <div class="btn-tags mb-2">
+        <a href="#" role="button" class="btn btn-outline-primary  col-md-2 col-xl-2 me-2 rounded-5 ">adventure</a>
+        <a href="blog.html" role="button" class="btn btn-outline-primary col-md-1 me-2 rounded-5 ">blogs</a>
+        <a href="#" role="button" class="btn btn-outline-primary col-md-1 me-2 rounded-5 ">nepal</a>
+        <a href="#" role="button" class="btn btn-outline-primary col-md-1 me-2 rounded-5">trek</a>
+        <a href="#" role="button"
+          class="btn btn-outline-primary col-md-2 me-2 d-none d-sm-inline-block col-sm-2 mt-1  rounded-5 ">climbing</a>
+        <h2 class="text-start mb-3"></h2>
+      </div>
+      <!-- left-side-content -->
+      <div class="col-md-7 col-lg-8  pe-md-3 pe-lg-5 ">
+        <div class="row d-flex justify-content-evenly">
+          <div class="col-md-4 g-1 ">
+
+            <div class="gallery-item">
+              <img src="images/peak_climb1.jpg" alt="Image 2">
+              <div class="overlay-content">
+                <div class="content col-12">
+                  <h4 class="fw-bold">Peak Climbing</h4>
+                  <p>Peak Climbing by a strong lady with proper guidance.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 g-1">
+            <div class="gallery-item-2 mb-1">
+              <img src="images/rock_climb1.jpg" alt="Image 3" class="img-fluid">
+              <div class="overlay-content">
+                <div class="content col-12">
+                  <h4 class="fw-bold">Rock Climbing</h4>
+                  <!-- <p>Peak Climbing by a strong lady with proper guidance.</p> -->
+                </div>
+              </div>
+            </div>
+            <div class="gallery-item-2">
+              <img src="/images/bungee.jpg" alt="Image 4" class="img-fluid">
+              <div class="overlay-content">
+                <div class="content col-12">
+                  <h4 class="fw-bold">Bungee Jumping</h4>
+                  <!-- <p>Peak Climbing by a strong lady with proper guidance.</p> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-md-4 g-1 ">
+            <div class="gallery-item">
+              <img src="images/rafting.jpg" alt="Image 6" class="img-fluid">
+              <div class="overlay-content">
+                <div class="content col-12">
+                  <h4 class="fw-bold">Rafting</h4>
+                  <!-- <p>Peak Climbing by a strong lady with proper guidance.</p> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row d-flex flex-wrap my-3 trip-facts">
+          <h4 class="fw-bold text-center">Trip Facts</h4>
+          <div class="col-6  col-lg-4 mb-3">
+            <div class="row d-flex align-items-center">
+              <div class="col-4  ">
+                <i class="bi bi-calendar-date-fill g-0 px-2 border-1 "></i>
+              </div>
+              <div class="col-8">
+                <p class="text-primary fw-bold">Trip Duration:</p>
+                <span>16 Days</span>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-6  col-lg-4 mb-3">
+            <div class="row d-flex align-items-center">
+              <div class="col-4 ">
+                <i class="bi bi-cloud-sun-fill g-0 px-2 border-1 "></i>
+              </div>
+              <div class="col-8">
+                <p class="text-primary fw-bold">Weather:</p>
+                <span>Cold, Warm</span>
+
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <div class="col-6 col-lg-4 mb-3 ">
+            <div class="row d-flex align-items-center">
+              <div class="col-4">
+                <i class="bi bi-speedometer g-0 px-2 border-1 "></i>
+              </div>
+              <div class="col-8">
+                <p class="text-primary fw-bold">Difficulty:</p>
+                <span>Extreme</span>
+
+              </div>
+            </div>
+
+
+
+          </div>
+          <div class="col-6 col-lg-4 mb-3">
+            <div class="row d-flex align-items-center">
+              <div class="col-4 ">
+                <i class="bi bi-bag-heart px-2 border-1 "></i>
+              </div>
+              <div class="col-8">
+                <p class="text-primary fw-bold">Best Time:</p>
+                <span>Winter</span>
+
+              </div>
+            </div>
+
+
+
+          </div>
+          <div class="col-6 col-lg-4 mb-3">
+            <div class="row d-flex align-items-center">
+              <div class="col-4 ">
+                <i class="bi bi-stars px-2 border-1 "></i>
+              </div>
+              <div class="col-8">
+                <p class="text-primary fw-bold">Special:</p>
+                <span>Nature</span>
+
+              </div>
+            </div>
+
+
+          </div>
+          <div class="col-6 col-lg-4 mb-3 ">
+            <div class="row d-flex align-items-center">
+              <div class="col-4 ">
+                <i class="bi bi-gem px-2 border-1 "></i>
+              </div>
+              <div class="col-8">
+                <p class="text-primary fw-bold">Others:</p>
+                <span>All</span>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div class="row d-flex flex-row  d-none d-xl-block">
+          <ul class="list-group list-group-horizontal mx-auto ">
+            <li class="list-group-item">
+              <button id="overBtn" class="btn" onclick="openOverview()">Overview</button>
+            </li>
+            <li class="list-group-item">
+              <button id="iterBtn" class="btn" onclick="openIternary()">Iternaries</button>
+            </li>
+            <li class="list-group-item">
+              <button id="incluBtn" class="btn" onclick="openIncluExclu()">Inclusions/Exclusions</button>
+            </li>
+            <li class="list-group-item">
+              <button id="dateBtn" class="btn" onclick="openDatePrice()">Date & Price</button>
+            </li>
+            <li class="list-group-item">
+              <button id="faqBtn" class="btn" onclick="openFAQ()">FAQs</button>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="row d-flex ">
+          <div class="col-12">
+            <div id="over-content" class="tab-content">
+              <h4 class="fw-bold">Overview</h4>
+              <p>
+                Everest Base Camp Trek is world famous and popular trekking route in the Himalayas of Nepal, Trekking at
+                the base Camp of the world's highest Mt. Everest at 5,357 m / 15,500 ft high, Exploring Sherpa
+                traditional villages enriched with Buddhist culture and custom.
+                <br> <br>
+                Trek To Everest Base camp gives the wonderful experience of Tibetan culture in high elevation,
+                pleasantly colorful views of rhododendron fir forests and massive of outstanding Himalayas views
+                including the world's highest peak Mt Everest.
+              </p>
+            </div>
+          </div>
+
+
+          <div id="iternary-content" class="tab-content">
+            <div class="container">
+
+              <h4 class="fw-bold">Iternary</h4>
+              <div class="accordion accordion-flush" id="accordionExample">
+                <!-- accordion-1 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      <i class="fa-sharp fa-solid fa-location-dot fa-beat fa-sm me-2" style="color: #0080ff;"></i>
+                      Day-1 Kathmandu Arrival
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      himalayan travels airport representative will receive you at the airport and transfer you to the
+                      Hotel in Kathmandu as denoted in the itinerary. All the trip plans will be discussed. You will be
+                      given the permits and necessary documents which we will prepare before your arrival. The welcome
+                      dinner is organized and guides are introduced. Overnight at Hotel
+                    </div>
+                  </div>
+                </div>
+                <!-- accordion-2 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <i class="fa-sharp fa-solid fa-location-dot fa-beat fa-sm me-2" style="color: #0080ff;"></i>
+                      Day-2 Kathmandu Sightseeing and trip Prepare
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Today we visit a variety of places in Kathmandu valley. You will explore Pashupatinath Temple,
+                      worship lord Shiva and learn about the culture more vastly, next stop will be Guheswori Temple one
+                      of the holiest temple 1 km east from Pasupatinath on the bank of the Bagmati river. We'll then
+                      drive a short distance to the Boudhanath Stupa. In Boudhanath, wander the Tibetan-inspired streets
+                      and illustrate some local delicacies, Final destination will be Jalnarayan Temple (Sleeping
+                      Vishnu) which takes around 45 minutes which stretches in Shivapuri National Park, worship Lord
+                      Vishnu, and Transfer to Hotel.
+                    </div>
+                  </div>
+                </div>
+                <!-- accordion-3 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <i class="fa-sharp fa-solid fa-location-dot fa-beat fa-sm me-2" style="color: #0080ff;"></i>
+                      Day-3 Flight to Lukla, Trek to Phagding
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p>You can find your Itinerary on our official website www.gurutravelsltd.com. We will send a copy
+                        of the
+                        itinerary to your mail id upon request.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- accordion-4 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      <i class="fa-sharp fa-solid fa-location-dot fa-beat fa-sm me-2" style="color: #0080ff;"></i>
+                      Day-4 Trek to Namch bazar </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      After breakfast, we start our journey towards Namche. Today is a hard day for walking as it has
+                      steep ascents. However, the view is fantastic and you will stop numerous times to capture the
+                      marvelous view. As we reach Monjo we will have to enter the Sagarmatha National Park. It is listed
+                      as the UNESCO WORLD HERITAGE SITE also.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- accordion-5 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      <i class="fa-sharp fa-solid fa-location-dot fa-beat fa-sm me-2" style="color: #0080ff;"></i>
+                      Day-5 Nakting to Lakting
+                    </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      After Breakfast, we will head towards Tengboche Monastery. The trail is uphill and downhill of
+                      almost equal proportion. We will have to walk downhill up to Phungi Thanga and from there onwards
+                      the ascent through green lush forests
+                    </div>
+                  </div>
+                </div>
+
+                <!-- accordion-6 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                      <i class="fa-sharp fa-solid fa-location-dot fa-beat fa-sm me-2" style="color: #0080ff;"></i>
+                      Day-6 Lakting to Sakting
+                    </button>
+                  </h2>
+                  <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      After Breakfast, we will head towards Tengboche Monastery. The trail is uphill and downhill of
+                      almost equal proportion. We will have to walk downhill up to Phungi Thanga and from there onwards
+                      the ascent through green lush forests
+                    </div>
+                  </div>
+                </div>
+
+                <!-- accordion-7 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                      <i class="fa-sharp fa-solid fa-location-dot fa-beat fa-sm me-2" style="color: #0080ff;"></i>
+                      Day-7 Trek to EBC
+                    </button>
+                  </h2>
+                  <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      After Breakfast, we will head towards Tengboche Monastery. The trail is uphill and downhill of
+                      almost equal proportion. We will have to walk downhill up to Phungi Thanga and from there onwards
+                      the ascent through green lush forests
+                    </div>
+                  </div>
+                </div>
+
+                <!-- accordion-8 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                      <i class="fa-sharp fa-solid fa-location-dot fa-beat fa-sm me-2" style="color: #0080ff;"></i>
+                      Day-8 Back to Kathmandu
+                    </button>
+                  </h2>
+                  <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      After Breakfast, we will head towards Tengboche Monastery. The trail is uphill and downhill of
+                      almost equal proportion. We will have to walk downhill up to Phungi Thanga and from there onwards
+                      the ascent through green lush forests
+                    </div>
+                  </div>
+                </div>
+                <!-- accordion-9 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                      <i class="fa-sharp fa-solid fa-location-dot fa-beat fa-sm me-2" style="color: #0080ff;"></i>
+                      Day-9 Final Departure
+                    </button>
+                  </h2>
+                  <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Our officials will bid you farewell and our airport representative will take you to the airport
+                      for the final departure
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <h3>Trip Map</h3>
+              <div class="col-12 ">
+
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1rlVI3SHBZhC7WyqhNZLdoILRqlAyD97G&ehbc=2E312F"
+                  height="250px" width="100%"></iframe>
+              </div>
+
+              
+              <div class="incluexclu">
+                <ul class="list-unstyled">
+                  <h2>What's included</h2>
+                  <li>
+                    <i class="fa-solid fa-circle-check fa-sm" style="color: #0080ff;"></i>
+                    All Ground Transportation by private Vehicle.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check fa-sm" style="color: #0080ff;"></i>
+                    Airport to Airport Transportation.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check fa-sm" style="color: #0080ff;"></i>
+                    3 Night accommodation in Kathmandu on BB Basis in 3-Star category Hotel.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check fa-sm" style="color: #0080ff;"></i>
+                    Best available accommodation in Tea House Lodge on a twin-sharing basis during the trek.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check fa-sm" style="color: #0080ff;"></i>
+                    Trekking Guide and Porter Salary, Food, Accommodation, and Insurance
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check fa-sm" style="color: #0080ff;"></i>
+                    Three times meals (breakfast, lunch, and Dinner) during the trek
+                    .
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check fa-sm" style="color: #0080ff;"></i>
+                    Three times meals (breakfast, lunch, and Dinner) during the trek
+                    .
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check fa-sm" style="color: #0080ff;"></i>
+                    Down Jacket and Sleeping Bag by YOLO Hike
+                    .
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check fa-sm" style="color: #0080ff;"></i>
+                    All entrance fees and taxes including Airport Tax
+                    .
+                  </li>
+
+
+                </ul>
+
+                <ul class="list-unstyled">
+                  <h2>What's Excluded?</h2>
+                  <li>
+                    <i class="fa-sharp fa-solid fa-circle-xmark fa-sm" style="color: #cf0404;"></i>
+                    Any cold and Hard Drinks.
+                  </li>
+                  <li>
+                    <i class="fa-sharp fa-solid fa-circle-xmark fa-sm" style="color: #cf0404;"></i>
+                    Travel Insurance.
+                  </li>
+                  <li>
+                    <i class="fa-sharp fa-solid fa-circle-xmark fa-sm" style="color: #cf0404;"></i>
+                    Tips for staffs.
+                  </li>
+                  <li>
+                    <i class="fa-sharp fa-solid fa-circle-xmark fa-sm" style="color: #cf0404;"></i>
+                    Internet and Hot Shower during trek.
+                  </li>
+                  <li>
+                    <i class="fa-sharp fa-solid fa-circle-xmark fa-sm" style="color: #cf0404;"></i>
+                    International Flight Tickets.
+                  </li>
+                  <li>
+                    <i class="fa-sharp fa-solid fa-circle-xmark fa-sm" style="color: #cf0404;"></i>
+                    Any cold and Hard Drinks.
+                  </li>
+                </ul>
+              </div>
+
+              <h2>Date and Price</h2>
+              <div id="date-price" class="border-1 border-primary shadow rounded-3 my-3 py-4 px-5">
+                <p class="price">Price starts from:<strong> 5000$</strong></p>
+                <div class="row d-flex">
+                  <div class="col-12 col-sm-6 mb-3">
+                    <div class="date ">
+                      Starting from <strong>20th October 2023.</strong>
+                    </div>
+                  </div>
+                  <div class="col-12 cols-sm-3 offset-3">
+                    <div>
+                      <a href="booknow2.html"
+                        class="text-decoration-none bg-success text-white py-2 px-4 rounded-3">Book Now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+        <section class="content-item" id="comments">
+          <div class="container">   
+            <div class="row">
+                  <div class="col-12">   
+                      <form>
+                      
+                      <h3>4 Comments</h3>
+                      
+                      <!-- COMMENT 1 - START -->
+                      <div class="media">
+                          <a class="pull-left" href="#"><img class="media-object" src="images/teamkochinese.jpg" alt=""></a>
+                          <div class="media-body">
+                              <h4 class="media-heading">Shyame Solti</h4>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,.</p>
+                              <ul class="list-unstyled list-inline media-detail pull-left">
+                                  <li><i class="fa fa-calendar"></i>27/02/2014</li>
+                                  <li><i class="fa fa-thumbs-up"></i>13</li>
+                              </ul>
+                              <ul class="list-unstyled list-inline media-detail pull-right">
+                                  <li class=""><a href="">Like</a></li>
+                                  <li class=""><a href="">Reply</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                      <!-- COMMENT 1 - END -->
+                      
+                      <!-- COMMENT 2 - START -->
+                      <div class="media">
+                          <a class="pull-left" href="#"><img class="media-object" src="images/200girl2.jpg" alt=""></a>
+                          <div class="media-body">
+                              <h4 class="media-heading">Guffadi Rame</h4>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit ameipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                              <ul class="list-unstyled list-inline media-detail pull-left">
+                                  <li><i class="fa fa-calendar"></i>27/02/2014</li>
+                                  <li><i class="fa fa-thumbs-up"></i>13</li>
+                              </ul>
+                              <ul class="list-unstyled list-inline media-detail pull-right">
+                                  <li class=""><a href="">Like</a></li>
+                                  <li class=""><a href="">Reply</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                      <!-- COMMENT 2 - END -->
+                      
+                      <!-- COMMENT 3 - START -->
+                      <div class="media">
+                          <a class="pull-left" href="#"><img class="media-object" src="images/female-2.jpg" alt=""></a>
+                          <div class="media-body">
+                              <h4 class="media-heading">Alxi Hari</h4>
+                              <p>Lorem ipsum dolorm ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                              <ul class="list-unstyled list-inline media-detail pull-left">
+                                  <li><i class="fa fa-calendar"></i>27/02/2014</li>
+                                  <li><i class="fa fa-thumbs-up"></i>13</li>
+                              </ul>
+                              <ul class="list-unstyled list-inline media-detail pull-right d-flex">
+                                  <li class=""><a href="">Like</a></li>
+                                  <li class=""><a href="">Reply</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                      <!-- COMMENT 3 - END -->
+                      
+                      <!-- COMMENT 4 - START -->
+                      <div class="media">
+                          <a class="pull-left" href="#"><img class="media-object" src="images/mt-guide-2.jpg" alt=""></a>
+                          <div class="media-body">
+                              <h4 class="media-heading">Harke Don</h4>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum  ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                              <ul class="list-unstyled list-inline media-detail pull-left">
+                                  <li><i class="fa fa-calendar"></i>27/02/2014</li>
+                                  <li><i class="fa fa-thumbs-up"></i>13</li>
+                              </ul>
+                              <ul class="list-unstyled list-inline media-detail pull-right">
+                                  <li class=""><a href="">Like</a></li>
+                                  <li class=""><a href="">Reply</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                      <!-- COMMENT 4 - END -->
+                  
+                  </div>
+              </div>
+          </div>
+      </section>
+        <!-- comments end -->
+      </div> <!--left side content closed div-->
+
+
+
+
+      <!-- right-side-content -->
+      <div class="col-md-5 col-lg-4 ps-md-3 pe-md-0 gx-xl-5 ">
+        <form action="">
+
+          <input type="search" name="search" id="search" placeholder="search" class="form-control mb-3">
+        </form>
+        <h4 class="fw-bold recent-blogs">Recent Blogs
+          <div class="circle">
+
+          </div>
+        </h4>
+        <!-- recent-blogs-starts -->
+        <div class="blog-sides my-1">
+          <!-- recent-blogs-card-1 -->
+          <div class="card mt-2 mb-md-5 border-0 recent-blogs-cards  col-12">
+            <div class="row d-flex align-items-center g-0">
+              <div class="col-lg-4 col-4 ">
+                <a href="">
+                  <img src="images/everest.jpg" class="img-fluid rounded-2 blogside-img" alt="...">
+
+                </a>
+              </div>
+              <div class="col-lg-8  col-8">
+                <a href="" class="text-decoration-none">
+                  <div class="card-body  ">
+                    <h5 class="card-title">Everest Trek</h5>
+                    <p class="card-text">Everest trek is the most adventurous one in Nepal. <br><span
+                        class="text-danger fw-bold"> Read more.....</span></p>
+                    <p class="card-text "><small class="text-body-secondary">Posted on 23<sup>th</sup>May, 2023</small>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- recent-blogs-card-2 -->
+          <div class="card mt-md-5 mb-5 border-0 recent-blogs-cards  col-12">
+            <div class="row d-flex align-items-center g-0">
+              <div class="col-md-4 col-4">
+                <a href="">
+                  <img src="images/lake-mntn.jpg" class="img-fluid rounded-2 blogside-img" alt="...">
+
+                </a>
+              </div>
+              <div class="col-md-8 col-8">
+                <a href="" class="text-decoration-none">
+                  <div class="card-body ">
+                    <h5 class="card-title">Tilicho Trek</h5>
+                    <p class="card-text">Tilicho trek is the most adventurous one in Nepal. <br><span
+                        class="text-danger fw-bold"> Read more.....</span></p>
+                    <p class="card-text"><small class="text-body-secondary">Posted on 23<sup>th</sup>May, 2023</small>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- recent-blogs-card-3 -->
+          <div class="card mt-2 mb-5 border-0 recent-blogs-cards  col-12">
+            <div class="row d-flex align-items-center g-0">
+              <div class="col-md-4 col-4">
+                <a href="">
+                  <img src="images/lake.jpg" class="img-fluid rounded-2 blogside-img" alt="...">
+
+                </a>
+              </div>
+              <div class="col-md-8 col-8">
+                <a href="" class="text-decoration-none">
+                  <div class="card-body ">
+                    <h5 class="card-title">Gosainkunda Trek</h5>
+                    <p class="card-text">Everest trek is the most adventurous one in Nepal. <br><span
+                        class="text-danger fw-bold"> Read more.....</span></p>
+                    <p class="card-text"><small class="text-body-secondary">Posted on 23<sup>th</sup>May, 2023</small>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- recent-blogs-card-1 -->
+          <div class="card mt-2 mb-5 border-0 recent-blogs-cards  col-12">
+            <div class="row d-flex align-items-center g-0">
+              <div class="col-md-4 col-4">
+                <a href="">
+                  <img src="images/everest.jpg" class="img-fluid rounded-2 blogside-img" alt="...">
+
+                </a>
+              </div>
+              <div class="col-md-8 col-8">
+                <a href="" class="text-decoration-none">
+                  <div class="card-body ">
+                    <h5 class="card-title">Everest Trek</h5>
+                    <p class="card-text">Everest trek is the most adventurous one in Nepal. <br><span
+                        class="text-danger fw-bold"> Read more.....</span></p>
+                    <p class="card-text"><small class="text-body-secondary">Posted on 23<sup>th</sup>May, 2023</small>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- recent-blogs-card-1 -->
+          <div class="card mt-2 mb-5 border-0 recent-blogs-cards  col-12">
+            <div class="row d-flex align-items-center g-0">
+              <div class="col-md-4 col-4">
+                <a href="">
+                  <img src="images/everest.jpg" class="img-fluid rounded-2 blogside-img" alt="...">
+
+                </a>
+              </div>
+              <div class="col-md-8 col-8">
+                <a href="" class="text-decoration-none">
+                  <div class="card-body ">
+                    <h5 class="card-title">Everest Trek</h5>
+                    <p class="card-text">Everest trek is the most adventurous one in Nepal. <br><span
+                        class="text-danger fw-bold"> Read more.....</span></p>
+                    <p class="card-text"><small class="text-body-secondary">Posted on 23<sup>th</sup>May, 2023</small>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- recent-blogs-card-1 -->
+          <div class="card mt-2 mb-5 border-0 recent-blogs-cards  col-12">
+            <div class="row d-flex align-items-center g-0">
+              <div class="col-md-4 col-4">
+                <a href="">
+                  <img src="images/everest.jpg" class="img-fluid rounded-2 blogside-img" alt="...">
+
+                </a>
+              </div>
+              <div class="col-md-8 col-8">
+                <a href="" class="text-decoration-none">
+                  <div class="card-body ">
+                    <h5 class="card-title">Everest Trek</h5>
+                    <p class="card-text">Everest trek is the most adventurous one in Nepal. <br><span
+                        class="text-danger fw-bold"> Read more.....</span></p>
+                    <p class="card-text"><small class="text-body-secondary">Posted on 23<sup>th</sup>May, 2023</small>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- recent-blogs-card-ends -->
+
+        </div>
+        <!-- recent-blogs-section-ends -->
+
+
+        <!-- </div> -->
+        <!-- blog-right-side-content-ends -->
+      </div>
+    </div>
+    <!-- blog-description ends -->
+
+
+
+    <!-- start of faq section -->
+
+    <div class="container">
+      <h3 class="text-center align-content-around">FAQs</h3>
+
+      <div class="accordion" id="accordionExample">
+        <!-- accordion-1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Which are the most visited place in Nepal?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Kathmandu and Pokhara.</strong> Some of the most visited places of Nepal include Kathmandu,
+              Bhaktapur, Lalitpur( city of Temple), Pokhara(City of the lake), Lukla (gateway to the mountain range),
+              Manang(ancient forbidden kingdom), and Mustang(Cold Desert of Nepal).
+            </div>
+          </div>
+        </div>
+        <!-- accordion-2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              What are the best things to do in Nepal?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Many More....</strong>
+              As a tourist, you can visit the amazing valleys and admire the stunning scenes they offer, experience the
+              rich culture and history by visiting the old and ancient monuments, try various mouthwatering dishes of
+              Nepal and go for a trek in the stunning peaks and mountains.
+            </div>
+          </div>
+        </div>
+        <!-- accordion-3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Where are can I find my itinerary once my trip is booked?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>You can find your Itinerary on our official website www.gurutravelsltd.com. We will send a copy of the
+                itinerary to your mail id upon request.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- accordion-4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              What do we need to travel in Nepal as Foreigner? </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>You have to bring your Passport and Visa papers along with Covit-test Negative documents in order
+                to travel/visit in Nepal.</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- accordion-5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Where are You Located?
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>We are Located at Thamel in Kathmandu.</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <h3>Still Got Questions?</h3>
+        <p>If you cannot find answer to your questions in our FAQ, you can always <a href="contact.html"
+            class="text-decoration-none text-primary">contact us</a>. We will answer to you shortly!</p>
+      </div>
+    </div>
+
+    <!-- end of faq section -->
+
+
+    <!-- start of footer -->
+    <div class="container">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-lg-2  col-sm-6 mb-3">
+            <h5>Company</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blog</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 mb-3 ">
+            <h5>Contact Us</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kathmandu, Nepal</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">+977 1234567890</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">suwasg2357@gmail.com</a></li>
+              <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li> -->
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-sm-6 mb-3   ">
+            <h5>Quick Links</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Style-Guide</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Careers</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Help-Text</a></li>
+              <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li> -->
+            </ul>
+          </div>
+
+          <div class="col-lg-5  col-sm-6  mb-3  ">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-center py-4 my-4 border-top">
+          <p>&copy; 2023 | SuwasGhale, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex mx-5">
+            <li class="twitter-icon">
+              <a href="https://www.twitter.com"><i class='bx bxl-twitter px-1'></i></a>
+            </li>
+            <li class="fb-icon">
+              <a href="https://www.facebook.com"><i class='bx bxl-facebook-circle px-1'></i></a>
+            </li>
+
+            <li class="insta-icon">
+              <a href="https://www.instagram.com"><i class='bx bxl-instagram-alt px-1'></i></a>
+            </li>
+
+            <li class="linkedin-icon">
+              <a href="https://www.linkedin.com"><i class='bx bxl-linkedin-square px-1'></i></a>
+            </li>
+            <!-- <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+
+            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+
+            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li> -->
+
+          </ul>
+        </div>
+      </footer>
+      <!-- end of footer -->
+      <!-- bootstrap-js -->
+      <script src="assets/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

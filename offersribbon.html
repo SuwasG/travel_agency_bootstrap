@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ribbon Shape | Dev Mode</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- ICONS FONTAWESOME CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- bootstrap-css -->
+  <link rel="stylesheet" href="assets/css/bootstrap.css" />
+  <!-- custom-css -->
+
+
+  <!-- box-icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="tourism.css">
+
+  <style>
+    /* ------------ VARIABLES ------------ */
+    :root {
+      /* FONT */
+      --font: 'Poppins', sans-serif;
+
+      /* COLORS */
+      --color: #d21031;
+      --bg-color: #f4f6fb;
+    }
+
+    /* ------------ BASE ------------ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* body {
+      font-family: var(--font);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+    } */
+
+    /* ------------ CARD ------------ */
+    .card {
+      background-color: #fff;
+
+      width: 100%;
+      height: 30em;
+      border-radius: 1em;
+      box-shadow: 0 1em 1em rgba(0, 0, 0, .15);
+
+      position: relative;
+
+      margin-right: 50px;
+    }
+
+    .card__ribbon {
+      width: 12em;
+      height: 12em;
+
+      position: absolute;
+      top: -1em;
+      left: -1em;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
+    }
+
+    .card__ribbon::after {
+      content: 'Special Offer';
+      position: absolute;
+      width: 150%;
+      height: 2em;
+      background-color: rgb(27, 127, 185);
+      transform: rotate(-45deg) translateY(-1.2em);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: .1em;
+
+      /* box-shadow: 0 .3em .6em rgba(0, 0, 0, .2); */
+    }
+
+    .card__ribbon::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 1em;
+      height: 1.9em;
+      background-color: #1088d2;
+      box-shadow: 10.79em -11em #1088d2;
+    }
+
+    /* .card-wrapper {
+      display: flex;
+      justify-content: space-between;
+    } */
+
+
+
+    .card a img {
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+      transition: 2s ease-in-out;
+    }
+
+    /* .card img:hover {
+    transform: scale(1.1);
+  } */
+
+    .try {
+      border: 2px solid red;
+    }
+
+    .try2 {
+      border: 2px solid rgb(0, 255, 123);
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container-fluid custom-header d-none d-lg-block">
+    <div class="row d-flex align-items-center">
+      <div class="col-sm-2">
+
+        <img src="images/Summit.png" alt="" width="100" />
+
+
+      </div>
+
+      <!-- <div class="col-sm-10 align-content-lg-end "> -->
+      <!-- <div class="row d-flex"> -->
+      <!-- <li class="list-unstyled"><a href="login.html" class="text-white text-decoration-none"><i class='bx bxs-user fs-2 mt-1'></i></a></li> -->
+      <div class="col-sm-2 mb-2">
+        <a href="tel:9741716087" class="text-decoration-none text-white"><i class="bx bxs-phone-call fs-5"> </i><span
+            class="display-none display-md-inline-block">+977 1234567890</span></a>
+      </div>
+
+      <div class="col-sm-3 mb-2">
+        <a href="mailto:suwasghale2281@gmail.com" class="text-decoration-none text-white align-items-center"><i
+            class="bx bxs-envelope fs-5"> </i><span
+            class="display-none display-md-inline-block">himalayantravels2023@gmail.com</span>
+        </a>
+      </div>
+
+
+      <div class=" col-sm-4 mb-2">
+        <form action="" class="inline-form d-flex me-2">
+          <input type="search" name="search" id="search" placeholder="search here" class="form-control" />
+          <button type="button" class="btn btn-primary text-white mx-2">
+            <i class="bx bx-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="col-sm-1">
+        <div class="row d-flex">
+          <div class="col-6">
+            <a href="loginboot.html" class="text-white text-decoration-none"><i class="bx bxs-user-plus fs-4"></i>
+              <!-- <span>Register</span>  -->
+            </a>
+          </div>
+
+          <div class="col-6 ">
+            <a href="booknow2.html" class="text-white text-decoration-none">
+              <i class="bx bxs-cart-add fs-4">
+                <!-- <span>Cart</span> -->
+              </i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- start of navigation bar-->
+
+  <nav class="navbar navbar-expand-lg  sticky-top ps-2">
+
+
+    <a class="navbar-brand  scroll-icon d-none d-lg-block " href="tourism_project.html">Himalayan Travels</a>
+    <img src="images/himalayan_travels.png" alt="" width="100px" class="d-block d-lg-none">
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="booknow2.htmlnavbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse me-5 " id="navbarNavDropdown">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="tourism_project.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false"
+            href="about_company_info.html">About Us
+          </a>
+          <ul class="dropdown-menu dropdown-menu-md-center">
+            <li><a href="about_company_info.html" class="dropdown-item">Company Info</a></li>
+
+            <li><a href="about_our_team.html" class="dropdown-item">Team Members</a></li>
+            <li>
+            <li><a href="payments.html" class="dropdown-item">Payment Methods</a></li>
+            <li><a href="terms.html" class="dropdown-item">Terms and Conditions</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a href="documents.html" class="dropdown-item">Documents<span
+                  class="badge bg-primary rounded-pill">New</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- <li class="nav-item">
+                    <a class="nav-link" href="booknow2.html">Packages </a>
+                </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="filterpackages.html" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Packages
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="domestic.html">Domestic Packages</a></li>
+            <li><a class="dropdown-item" href="internation.html">International Packages</a></li>
+
+
+            <li><a class="dropdown-item" href="filterpackages.html">Most Popular Packages</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Our Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="trekking.html" class="dropdown-item">Trekking and Tour</a></li>
+            <li><a href="flight_book.html" class="dropdown-item">Flight Booking</a></li>
+            <li><a href="hotel_book.html" class="dropdown-item">Hotel Reservation</a></li>
+            <li><a href="filteradventure.html" class="dropdown-item">Adventurous Activities</a></li>
+            <li><a href="vehicle.html" class="dropdown-item">Vehicle Rent</a></li>
+            <li><a href="shop.html" class="dropdown-item">Travel Shop</a></li>
+            <li><a href="currency.html" class="dropdown-item">Currency Exchange</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="offersribbon.html" class="nav-link">Offers</a>
+        </li>
+        <li class="nav-item">
+          <a href="filteradventure.html" class="nav-link">Adventurous Activities</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link">Blog</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a href="booknow2.html" class="nav-link">Career</a>
+        </li> -->
+
+        <!-- <li class="nav-item">
+                <a href="booknow2.html"  class="nav-link bg-danger rounded-2 text-white flex-shrink-0 d-inline-block" aria-expanded="false" role="button" >Reserve Now</a>
+                </li> -->
+
+        <li class="nav-item ">
+          <a class="nav-link dropdown-item bg-danger text-white book-now" href="booknow2.html">Book Now
+          </a>
+        </li>
+
+
+      </ul>
+      <div class="row d-flex align-items-center d-block d-lg-none ">
+        <div class="col-1 pe-sm-2">
+          <a href="loginboot.html" class="text-white text-decoration-none"><i class="bx bxs-user-plus fs-4"></i>
+            <!-- <span>Register</span>  -->
+          </a>
+        </div>
+        <div class="col-1 pe-sm-2">
+          <a href="booknow2.html" class="text-white text-decoration-none">
+            <i class="bx bxs-cart-add fs-4">
+              <!-- <span>Cart</span> -->
+            </i>
+          </a>
+        </div>
+        <div class="col-1 pe-sm-2">
+          <a href="mailto:suwasghale2281@gmail.com" class="text-decoration-none text-white align-items-center"><i
+              class="bx bxs-envelope fs-5"> </i>
+            <span class="display-none display-md-inline-block"></span>
+          </a>
+        </div>
+        <div class="col-1 me-sm-2">
+          <a href="tel:9741716087" class="text-decoration-none text-white"><i class="bx bxs-phone-call fs-5"> </i><span
+              class="display-none display-md-inline-block"></span></a>
+        </div>
+        <div class=" col-8 col-sm-7">
+          <form action="" class="inline-form d-flex ">
+            <input type="search" name="search" id="search" placeholder="search here" class="form-control me-2" />
+            <button type="button" class="btn btn-primary text-white ">
+              <i class="bx bx-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+
+    </div> <!--navbar-collapse ko closing div-->
+    </div>
+    <!-- </div>  -->
+    <!--container-fluid ko closing div-->
+  </nav>
+  <!-- end of navigation bar -->
+
+
+
+  <!-- breadcrumb -->
+
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="ms-sm-5 py-2">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="tourism_project.html">Home</a></li>
+      <!-- <li class="breadcrumb-item"><a href="currency.html">Our Services</a></li> -->
+      <li class="breadcrumb-item active" aria-current="page">Offers</li>
+      <!-- <li class="breadcrumb-item active" aria-current="page">Hotel</li> -->
+    </ol>
+  </nav>
+
+  <!-- breadcrumb ends -->
+
+  <div class="container">
+    <h2 class="fw-bold mt-4 mb-5 text-center">Offers</h2>
+
+    <div class="row d-flex">
+
+      <div class="col-md-3 col-8 offset-2 offset-sm-0  position-relative ">
+
+        <p class="fw-bold text-center">Filter by</p>
+        <div class="max-min">
+          <div>
+            <label for="minPrice">Minimum Price:</label>
+            <input type="number" id="minPrice" min="0" class="mb-sm-2 col-md-12 col-xl-10">
+          </div>
+
+          <div>
+            <label for="maxPrice">Maximum Price:</label>
+            <input type="number" id="maxPrice" min="0" class="mb-sm-2 col-md-12 col-xl-10">
+          </div>
+
+          <button id="filterButton" class="btn btn-success py-1 px-3 my-2">Search</button>
+        </div>
+
+
+        <div>
+          <p>Customer Ratings</p>
+          <ul class="list-unstyled ">
+
+            <li class="list-item">
+              <a href="booknow2.html" class="text-decoration-none text-dark">
+                5 Stars <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i
+                  class="bx bxs-star"></i><i class="bx bxs-star"></i> </a>
+            </li>
+            <li class="list-item">
+              4 Stars <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i
+                class="bx bxs-star"></i><i class="bx bx-star"></i>
+            </li>
+            <li class="list-item">
+              3 Stars <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i
+                class="bx bx-star"></i><i class="bx bx-star"></i>
+            </li>
+            <li class="list-item">
+              2 Stars <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bx-star"></i><i
+                class="bx bx-star"></i><i class="bx bx-star"></i>
+            </li>
+            <li class="list-item">
+              1 Stars <i class="bx bxs-star"></i><i class="bx bx-star"></i><i class="bx bx-star"></i><i
+                class="bx bx-star"></i><i class="bx bx-star"></i>
+            </li>
+          </ul>
+        </div>
+
+
+      </div>
+      <!-- filter part left side closed -->
+
+      <!-- right side cards list -->
+
+      <div class="col-md-9 col-12   package" id="package-1">
+
+        <div id="packageCards">
+
+          <div class="row d-flex align-items-center ">
+
+            <!-- special-packages-card-1 -->
+            <div class="col-10 offset-1  offset-sm-0 col-sm-6 col-xl-4 position-relative packageCard specialOffer"
+              data-price="15000">
+              <div class="card mb-4">
+                <span class="card__ribbon"></span>
+
+                <a href="booknow2.html">
+                  <img src="images/domestic4.png" alt="" class="img-fluid rounded-top-3 ">
+                </a>
+                <span
+                  class="position-absolute top-50  bg-primary py-1 px-2 rounded-2 ms-1 text-white fw-bold d-flex align-items-center justify-content-center">15000$
+                  <small>/person</small>
+                  <span class="offset-1"></span>
+                </span>
+                <div class="card-body">
+                  <a href="trek_description.html" class="card-title text-decoration-none fw-bold">Rasuwa Trek</a>
+                  <!-- <h5 class="card-subtitle">Special for natural scenes and Tamang Heritage Culture</h5> -->
+                  <a href="trek_description.html" class="text-decoration-none">
+                    <p class="card-text">
+                      Special For Natural Scenes.<br>
+                      <span class="fw-bold text-danger">Read More....</span>
+
+                    </p>
+                  </a>
+                  <div class="card-footer d-flex  flex-lg-row mb-1 ">
+                    <div class="col-7 d-flex flex-column flex-md-column ">
+
+                      <div class="star-icon col-12 ">
+                        <i class='bx bxs-star '></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                          class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                      </div>
+
+                      <div class="reviews col-12 ">
+                        (102 Reviews)
+                      </div>
+
+                    </div>
+                    <div
+                      class="col-5  offset-md-1  offset-xl-0 text-md-center text-center  d-flex flex-md-column flex-column  ">
+                      <div class="time-icon col-md-12 col-xl-12">
+                        <i class='bx bx-time fw-bold'></i>
+                      </div>
+                      <div class="time-descr col-md-12 ">
+                        100D/99N
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="btns-books d-flex align-content-lg-start">
+                    <a href="booknow2.html" class="btn btn-primary mx-auto">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- special-2-->
+            <div class="col-10 offset-1  offset-sm-0 col-sm-6 col-xl-4 position-relative packageCard specialOffer"
+              data-price="50000">
+              <div class="card mb-4">
+                <span class="card__ribbon"></span>
+                <a href="booknow2.html">
+                  <img src="images/inter3.png" alt="" class="img-fluid rounded-top-3 ">
+                </a>
+                <span
+                  class="position-absolute top-50  bg-primary py-1 px-2 rounded-2 ms-1 text-white fw-bold d-flex align-items-center justify-content-center">50000$
+                  <small>/person</small>
+                  <span class="offset-1"></span>
+                </span>
+                <div class="card-body">
+                  <a href="trek_description.html" class="card-title text-decoration-none fw-bold">Japan Tour</a>
+                  <!-- <h5 class="card-subtitle">Special for natural scenes and Tamang Heritage Culture</h5> -->
+                  <a href="trek_description.html" class="text-decoration-none">
+                    <p class="card-text">
+                      Special For Natural everything..<br>
+                      <span class="fw-bold text-danger">Read More....</span>
+
+                    </p>
+                  </a>
+                  <div class="card-footer d-flex  flex-lg-row mb-1 ">
+                    <div class="col-7 d-flex flex-column flex-md-column ">
+
+                      <div class="star-icon col-12 ">
+                        <i class='bx bxs-star '></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                          class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                      </div>
+
+                      <div class="reviews col-12 ">
+                        (102 Reviews)
+                      </div>
+
+                    </div>
+                    <div
+                      class="col-5  offset-md-1  offset-xl-0 text-md-center text-center  d-flex flex-md-column flex-column  ">
+                      <div class="time-icon col-md-12 col-xl-12">
+                        <i class='bx bx-time fw-bold'></i>
+                      </div>
+                      <div class="time-descr col-md-12 ">
+                        100D/99N
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="btns-books d-flex align-content-lg-start">
+                    <a href="booknow2.html" class="btn btn-primary mx-auto">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- special-card-3 -->
+            <div class="col-10 offset-1  offset-sm-0 col-sm-6 col-xl-4 position-relative packageCard specialOffer"
+              data-price="20000">
+              <div class="card mb-4">
+                <span class="card__ribbon"></span>
+
+                <a href="booknow2.html">
+                  <img src="images/everest.jpg" alt="" class="img-fluid rounded-top-3 ">
+                </a>
+                <span
+                  class="position-absolute top-50  bg-primary py-1 px-2 rounded-2 ms-1 text-white fw-bold d-flex align-items-center justify-content-center">20000$
+                  <small>/person</small>
+                  <span class="offset-1"></span>
+                </span>
+                <div class="card-body">
+                  <a href="trek_description.html" class="card-title text-decoration-none fw-bold">Everest base camp
+                    Trek</a>
+                  <!-- <h5 class="card-subtitle">Special for natural scenes and Tamang Heritage Culture</h5> -->
+                  <a href="trek_description.html" class="text-decoration-none">
+                    <p class="card-text">
+                      Special For Natural Scenes.<br>
+                      <span class="fw-bold text-danger">Read More....</span>
+
+                    </p>
+                  </a>
+
+                  <div class="card-footer d-flex  flex-lg-row mb-1 ">
+                    <div class="col-7 d-flex flex-column flex-md-column ">
+
+                      <div class="star-icon col-12 ">
+                        <i class='bx bxs-star '></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                          class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                      </div>
+
+                      <div class="reviews col-12 ">
+                        (102 Reviews)
+                      </div>
+
+                    </div>
+                    <div
+                      class="col-5  offset-md-1  offset-xl-0 text-md-center text-center  d-flex flex-md-column flex-column  ">
+                      <div class="time-icon col-md-12 col-xl-12">
+                        <i class='bx bx-time fw-bold'></i>
+                      </div>
+                      <div class="time-descr col-md-12 ">
+                        100D/99N
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="btns-books d-flex align-content-lg-start">
+                    <a href="booknow2.html" class="btn btn-primary mx-auto">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- special-4 -->
+            <div class="col-10 offset-1  offset-sm-0 col-sm-6 col-xl-4 position-relative packageCard specialOffer" data-price="1000">
+              <div class="card mb-4">
+                <span class="card__ribbon"></span>
+
+                <a href="booknow2.html">
+                  <img src="images/domestic21.png" alt="" class="img-fluid rounded-top-3 ">
+                </a>
+                <span
+                  class="position-absolute top-50  bg-primary py-1 px-2 rounded-2 ms-1 text-white fw-bold d-flex align-items-center justify-content-center">1000$
+                  <small>/person</small>
+                  <span class="offset-1"></span>
+                </span>
+                <div class="card-body">
+                  <a href="trek_description.html" class="card-title text-decoration-none fw-bold">Gosainkunda Trek</a>
+                  <!-- <h5 class="card-subtitle">Special for natural scenes and Tamang Heritage Culture</h5> -->
+                  <a href="trek_description.html" class="text-decoration-none">
+                    <p class="card-text">
+                      Special For Natural Scenes.<br>
+                      <span class="fw-bold text-danger">Read More....</span>
+
+                    </p>
+                  </a>
+                  <div class="card-footer d-flex  flex-lg-row mb-1 ">
+                    <div class="col-7 d-flex flex-column flex-md-column ">
+
+                      <div class="star-icon col-12 ">
+                        <i class='bx bxs-star '></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                          class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                      </div>
+
+                      <div class="reviews col-12 ">
+                        (102 Reviews)
+                      </div>
+
+                    </div>
+                    <div
+                      class="col-5  offset-md-1  offset-xl-0 text-md-center text-center  d-flex flex-md-column flex-column  ">
+                      <div class="time-icon col-md-12 col-xl-12">
+                        <i class='bx bx-time fw-bold'></i>
+                      </div>
+                      <div class="time-descr col-md-12 ">
+                        100D/99N
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="btns-books d-flex align-content-lg-start">
+                    <a href="booknow2.html" class="btn btn-primary mx-auto">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- special-card-5 -->
+            <div class="col-10 offset-1  offset-sm-0 col-sm-6 col-xl-4 position-relative packageCard specialOffer" data-price="7000">
+              <div class="card mb-4">
+                <span class="card__ribbon"></span>
+
+                <a href="booknow2.html">
+                  <img src="images/domestic6.png" alt="" class="img-fluid rounded-top-3 ">
+                </a>
+                <span
+                  class="position-absolute top-50  bg-primary py-1 px-2 rounded-2 ms-1 text-white fw-bold d-flex align-items-center justify-content-center">7000$
+                  <small>/person</small>
+                  <span class="offset-1"></span>
+                </span>
+                <div class="card-body">
+                  <a href="trek_description.html" class="card-title text-decoration-none fw-bold">Chitwan Tour</a>
+                  <!-- <h5 class="card-subtitle">Special for natural scenes and Tamang Heritage Culture</h5> -->
+                  <a href="trek_description.html" class="text-decoration-none">
+                    <p class="card-text">
+                      Special For Natural Scenes.<br>
+                      <span class="fw-bold text-danger">Read More....</span>
+
+                    </p>
+                  </a>
+
+                  <div class="card-footer d-flex  flex-lg-row mb-1 ">
+                    <div class="col-7 d-flex flex-column flex-md-column ">
+
+                      <div class="star-icon col-12 ">
+                        <i class='bx bxs-star '></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                          class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                      </div>
+
+                      <div class="reviews col-12 ">
+                        (102 Reviews)
+                      </div>
+
+                    </div>
+                    <div
+                      class="col-5  offset-md-1  offset-xl-0 text-md-center text-center  d-flex flex-md-column flex-column  ">
+                      <div class="time-icon col-md-12 col-xl-12">
+                        <i class='bx bx-time fw-bold'></i>
+                      </div>
+                      <div class="time-descr col-md-12 ">
+                        100D/99N
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="btns-books d-flex align-content-lg-start">
+                    <a href="booknow2.html" class="btn btn-primary mx-auto">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- special-card-6 -->
+            <div class="col-10 offset-1  offset-sm-0 col-sm-6 col-xl-4 position-relative packageCard specialOffer" data-price="8500">
+              <div class="card mb-4">
+                <span class="card__ribbon"></span>
+                <a href="booknow2.html">
+                  <img src="images/inter2.png" alt="" class="img-fluid rounded-top-3 ">
+                </a>
+                <span
+                  class="position-absolute top-50  bg-primary py-1 px-2 rounded-2 ms-1 text-white fw-bold d-flex align-items-center justify-content-center">8500$
+                  <small>/person</small>
+                  <span class="offset-1"></span>
+                </span>
+                <div class="card-body">
+                  <a href="trek_description.html" class="card-title text-decoration-none fw-bold">USA Tour</a>
+                  <!-- <h5 class="card-subtitle">Special for natural scenes and Tamang Heritage Culture</h5> -->
+                  <a href="trek_description.html" class="text-decoration-none">
+                    <p class="card-text">
+                      Special For Natural Scenes.<br>
+                      <span class="fw-bold text-danger">Read More....</span>
+
+                    </p>
+                  </a>
+
+                  <div class="card-footer d-flex  flex-lg-row mb-1 ">
+                    <div class="col-7 d-flex flex-column flex-md-column ">
+
+                      <div class="star-icon col-12 ">
+                        <i class='bx bxs-star '></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                          class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                      </div>
+
+                      <div class="reviews col-12 ">
+                        (102 Reviews)
+                      </div>
+
+                    </div>
+                    <div
+                      class="col-5  offset-md-1  offset-xl-0 text-md-center text-center  d-flex flex-md-column flex-column  ">
+                      <div class="time-icon col-md-12 col-xl-12">
+                        <i class='bx bx-time fw-bold'></i>
+                      </div>
+                      <div class="time-descr col-md-12 ">
+                        100D/99N
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="btns-books d-flex align-content-lg-start">
+                    <a href="booknow2.html" class="btn btn-primary mx-auto">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <span id="msg" class="fs-1 fw-bold text-center text-white mt-5 rounded-2"></span>
+
+
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+  <!-- bootstrap-js -->
+  <script src="assets/js/bootstrap.bundle.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    //    const displayMsg = (msg, idName, colorName) => {
+    //     document.getElementById(idName).innerHTML = msg
+    //     document.getElementById(idName).style.backgroundColor = colorName
+
+    //   }
+    // // Get the price input elements
+    // const minPriceInput = document.getElementById('minPrice');
+    // const maxPriceInput = document.getElementById('maxPrice');
+
+    // // Get the filter button
+    // const filterButton = document.getElementById('filterButton');
+
+    // // Get all package cards
+    // const packageCards = Array.from(document.getElementsByClassName('packageCard'));
+
+    // // Attach event listeners to the filter button
+    // filterButton.addEventListener('click', filterPackages);
+
+    // // Function to filter packages based on the selected price range
+    // function filterPackages() {
+    //   const minPrice = parseFloat(minPriceInput.value);
+    //   const maxPrice = parseFloat(maxPriceInput.value);
+
+    //   packageCards.forEach((card) => {
+    //     const price = parseFloat(card.getAttribute('data-price'));
+
+    //     if (price >= minPrice && price <= maxPrice) {
+    //       card.style.display = 'block';
+    //     } else {
+    //       card.style.display = 'none';
+    //       // document.getElementsByClassName('message').innerHtml=span
+    //      displayMsg('Sorry, did not found any packages/offers for this price range.','msg','red')
+    //     }
+    //   });
+    // }
+
+
+  </script>
+</body>
+
+</html>
